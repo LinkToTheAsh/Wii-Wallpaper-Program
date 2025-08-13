@@ -1,4 +1,5 @@
 # External script for [Wii wallpaper](https://steamcommunity.com/sharedfiles/filedetails/?id=3526096300) by [Lillykyu](https://www.lillykyu.gay/)
+# Original Script by [Pixel1011](https://github.com/Pixel1011)
 
 
 ## Usage instructions
