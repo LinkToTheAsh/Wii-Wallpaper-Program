@@ -59,6 +59,8 @@ Run these commands in order in the main directory:
   - ``tsc``
   - ``pkg .\dist\index.js --targets latest-win-x64 --output ./dont-touch/lillywallpaper.exe``
 
+Support the original creator on ko-fi! 
+
 :3
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N6145I0V)
 
