@@ -12,8 +12,8 @@ async function getLogFile() {
     if (fs_1.default.existsSync(logFilePath)) {
         return { path: logFilePath, guess: false };
     }
-    let findPath = (0, child_process_1.execSync)(`wmic process where "name='wallpaper32.exe'" get ExecutablePath`, { windowsHide: true }).toString().trim();
-    let findPath64 = (0, child_process_1.execSync)(`wmic process where "name='wallpaper64.exe'" get ExecutablePath`, { windowsHide: true }).toString().trim();
+    let findPath = (0, child_process_1.execSync)(`powershell.exe -command "Get-WmiObject win32_process | Where-Object name -eq wallpaper32.exe | Select -ExpandProperty ExecutablePath"`, { windowsHide: true }).toString().trim();
+    let findPath64 = (0, child_process_1.execSync)(`powershell.exe -command "Get-WmiObject win32_process | Where-Object name -eq wallpaper64.exe | Select -ExpandProperty ExecutablePath"`, { windowsHide: true }).toString().trim();
     if (!findPath.includes("ExecutablePath") && !findPath64.includes("ExecutablePath")) {
         return { path: "C:\\Program Files (x86)\\Steam\\steamapps\\common\\wallpaper_engine\\log.txt", guess: true };
     }
